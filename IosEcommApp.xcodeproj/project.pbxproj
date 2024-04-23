@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18A694FA2BD6C24900996490 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A694F92BD6C24900996490 /* Product.swift */; };
+		18A694FD2BD6C43C00996490 /* ImageSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A694FC2BD6C43C00996490 /* ImageSlider.swift */; };
+		18A694FF2BD6C7C700996490 /* ProductCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A694FE2BD6C7C700996490 /* ProductCardView.swift */; };
+		18A695012BD6C90F00996490 /* CartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A695002BD6C90F00996490 /* CartManager.swift */; };
+		18A695032BD6CC3100996490 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A695022BD6CC3100996490 /* SearchBarView.swift */; };
+		18A695052BD6D05700996490 /* CartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A695042BD6D05700996490 /* CartButton.swift */; };
+		18A695082BD6D6EE00996490 /* HomePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A695072BD6D6EE00996490 /* HomePageView.swift */; };
 		18DB01272BD3A4D700BFDC0B /* IosEcommAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DB01262BD3A4D700BFDC0B /* IosEcommAppApp.swift */; };
 		18DB01292BD3A4D700BFDC0B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DB01282BD3A4D700BFDC0B /* ContentView.swift */; };
 		18DB012B2BD3A4DA00BFDC0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18DB012A2BD3A4DA00BFDC0B /* Assets.xcassets */; };
@@ -14,6 +21,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18A694F92BD6C24900996490 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		18A694FC2BD6C43C00996490 /* ImageSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSlider.swift; sourceTree = "<group>"; };
+		18A694FE2BD6C7C700996490 /* ProductCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCardView.swift; sourceTree = "<group>"; };
+		18A695002BD6C90F00996490 /* CartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartManager.swift; sourceTree = "<group>"; };
+		18A695022BD6CC3100996490 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
+		18A695042BD6D05700996490 /* CartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartButton.swift; sourceTree = "<group>"; };
+		18A695072BD6D6EE00996490 /* HomePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageView.swift; sourceTree = "<group>"; };
 		18DB01232BD3A4D700BFDC0B /* IosEcommApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IosEcommApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18DB01262BD3A4D700BFDC0B /* IosEcommAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IosEcommAppApp.swift; sourceTree = "<group>"; };
 		18DB01282BD3A4D700BFDC0B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +46,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18A694F82BD6C22B00996490 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				18A694F92BD6C24900996490 /* Product.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		18A694FB2BD6C42200996490 /* Componets */ = {
+			isa = PBXGroup;
+			children = (
+				18A694FC2BD6C43C00996490 /* ImageSlider.swift */,
+				18A694FE2BD6C7C700996490 /* ProductCardView.swift */,
+				18A695022BD6CC3100996490 /* SearchBarView.swift */,
+				18A695042BD6D05700996490 /* CartButton.swift */,
+			);
+			path = Componets;
+			sourceTree = "<group>";
+		};
+		18A695062BD6D57400996490 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				18DB01282BD3A4D700BFDC0B /* ContentView.swift */,
+				18A695072BD6D6EE00996490 /* HomePageView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		18DB011A2BD3A4D700BFDC0B = {
 			isa = PBXGroup;
 			children = (
@@ -51,10 +93,13 @@
 		18DB01252BD3A4D700BFDC0B /* IosEcommApp */ = {
 			isa = PBXGroup;
 			children = (
+				18A695062BD6D57400996490 /* Views */,
+				18A694FB2BD6C42200996490 /* Componets */,
+				18A694F82BD6C22B00996490 /* Model */,
 				18DB01262BD3A4D700BFDC0B /* IosEcommAppApp.swift */,
-				18DB01282BD3A4D700BFDC0B /* ContentView.swift */,
 				18DB012A2BD3A4DA00BFDC0B /* Assets.xcassets */,
 				18DB012C2BD3A4DA00BFDC0B /* Preview Content */,
+				18A695002BD6C90F00996490 /* CartManager.swift */,
 			);
 			path = IosEcommApp;
 			sourceTree = "<group>";
@@ -138,7 +183,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				18DB01292BD3A4D700BFDC0B /* ContentView.swift in Sources */,
+				18A695052BD6D05700996490 /* CartButton.swift in Sources */,
+				18A695012BD6C90F00996490 /* CartManager.swift in Sources */,
 				18DB01272BD3A4D700BFDC0B /* IosEcommAppApp.swift in Sources */,
+				18A695032BD6CC3100996490 /* SearchBarView.swift in Sources */,
+				18A695082BD6D6EE00996490 /* HomePageView.swift in Sources */,
+				18A694FD2BD6C43C00996490 /* ImageSlider.swift in Sources */,
+				18A694FA2BD6C24900996490 /* Product.swift in Sources */,
+				18A694FF2BD6C7C700996490 /* ProductCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

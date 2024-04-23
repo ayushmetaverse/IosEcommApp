@@ -9,7 +9,7 @@ struct ContentView: View {
     
     var body: some View {
         TabView(selection:$currentTab ){
-            Text("Home View")
+            HomePageView()
                 .tag(Tab.Home)
             Text("Search View")
                 .tag(Tab.Search)

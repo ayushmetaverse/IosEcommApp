@@ -18,6 +18,7 @@ struct ProductCardView: View {
                     Text(product.name)
                         .font(.headline)
                         .padding(.vertical, 1)
+                        .foregroundColor(.black)
                     
                     Text(product.supplier)
                         .foregroundColor(.gray)

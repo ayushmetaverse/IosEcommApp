@@ -11,34 +11,44 @@ struct HomePageView: View {
                 VStack{
                     AppBar()
                     SearchBarView()
+                    
+                    ScrollView {
                     ImageSlider()
                     
-                    HStack{
-                        Text("NEW RIVARLS")
-                            .font(.title2)
-                            .fontWeight(.medium)
+                   
+                        HStack{
+                            Text("NEW RIVARLS")
+                                .font(.title2)
+                                .fontWeight(.medium)
+                            
+                            Spacer()
+                          
+                            NavigationLink(destination: ProductsView(), label: {
+                                Image(systemName: "circle.grid.2x2.fill")
+                                    .foregroundColor(Color("kPrimary"))
+
+                            })
+                        }
+                        .padding()
                         
-                        Spacer()
-                        Image(systemName: "circle.grid.2x2.fill")
-                            .foregroundColor(Color("kPrimary"))
-                    }
-                    .padding()
-                    
-                    ScrollView(.horizontal, showsIndicators: false){
-                        HStack(spacing: 10){
-                            ForEach(productList, id: \.id){ product in
-                                NavigationLink{
-                                    Text(product.name)
-                                } label: {
-                                    ProductCardView(product: product)
-                                        .environmentObject(cartManager)
+                        
+                        ScrollView(.horizontal, showsIndicators: false){
+                            HStack(spacing: 10){
+                                ForEach(productList, id: \.id){ product in
+                                    NavigationLink{
+                                       ProductDetailsView(product: product)
+                                    } label: {
+                                        ProductCardView(product: product)
+                                            .environmentObject(cartManager)
                                         
+                                    }
+                                    
                                 }
-                                
                             }
                         }
+                        .padding(.horizontal)
                     }
-                    .padding()
+                    .padding(.bottom, 50)
                 }
               
             }
@@ -74,21 +84,30 @@ struct AppBar: View {
                     
                     Spacer()
                     
-                    NavigationLink(destination: Text("")){
+                    NavigationLink(destination: CartView()
+                        .environmentObject(cartManager)
+                        ){
                         CartButton(numberOfProducts: cartManager.products.count)
                     }
                 }
                 
-                Text("Find The Most \nLuxurious")
-                    .font(.largeTitle .bold())
-                
-                + Text(" Furniture")
-                    .font(.largeTitle .bold())
-                    .foregroundColor(Color("kPrimary"))
+                VStack {
+                    Text("Find The Most")
+                        .font(.largeTitle .bold())
+                        .padding(.trailing, 90)
+                    HStack {
+                        Text("Luxurious")
+                            .font(.largeTitle .bold())
+                        Text("Furniture")
+                            .font(.largeTitle .bold())
+                        .foregroundColor(Color("kPrimary"))
+                    }
+                }
                
             }
         }
         .padding()
+        
         .environmentObject(CartManager())
     }
 }
